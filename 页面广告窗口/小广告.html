@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小广告</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+.box{
+	width: 200px;
+	height: 200px;
+	background: #253462;
+	position: absolute;
+}
+</style>
+<body>
+	<div class="box"></div>
+	<script>
+
+
+			let obj = new Float(box);
+				obj.start();
+
+			function Float(){
+				this.obj = obj;       //谁用我，this是谁
+				this.maxX = window.innerWidth - this.obj.offsetWidth;
+				this.speedX = 15;
+			}
+			Float.prototype = {
+
+			}
+			Float.prototype.start = function(){
+					let t = setInterval(function(){
+						console.log(this);
+					// 	let lefts = this.obj.offsetLeft + this.speedX;
+					// 	this.obj.style.left = lefts +px;
+					// },60)
+
+			});
+		}
+	</script>
+	<script src="animate.js"></script>
+</body>
+
+</html>
